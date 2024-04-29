@@ -1,0 +1,44 @@
+/* Basic table styles */
+table {
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse;
+    margin: 2rem auto; /* Add margin for better spacing */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  /* Table row spacing (optional) */
+  tr {
+    margin-bottom: 5px; /* Add some space between rows */
+  }
+  
+  /* Zebra striping (optional) */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Buttons below the table (optional) */
+  button[routerLink],
+  button[routerLink]:hover {
+    margin-top: 1rem; /* Add space between table and buttons */
+  }
+  
+  /* Optional responsive behavior (adjust as needed) */
+  @media (max-width: 768px) {
+    table {
+      font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+  }
+  

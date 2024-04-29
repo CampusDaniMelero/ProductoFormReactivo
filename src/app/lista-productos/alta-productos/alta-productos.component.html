@@ -1,0 +1,48 @@
+<div>
+    <form [formGroup]="form" #frmProducto="ngForm" (ngSubmit)="operar()">
+        @if(edicion){
+            <label for="">Id Producto</label>
+            <input placeholder="Id del producto" [readOnly]="true" formControlName="product_id">
+        }
+
+        <label for="">Id Producto</label>
+        <input placeholder="Id del producto"  formControlName="product_id">
+
+        <label for="">Nombre del producto</label>
+        <input placeholder="Nombre del producto" formControlName="product_name">
+
+        <label for="">Supplier</label>
+        <input placeholder="Supplier" formControlName="supplier_id">
+
+        <label for="">Categoria</label>
+        <input placeholder="Categoria" formControlName="category_id">
+
+        <label for="">Cantidad por unidad</label>
+        <input placeholder="Cantidad por unidad" formControlName="quantity_per_unit">
+
+        <label for="">Precio</label>
+
+        <input placeholder="Precio" formControlName="unit_price">
+
+        <label for="">Unidades en stock</label>
+
+        <input placeholder="Unidades en stock" formControlName="units_in_stock">
+
+        <label for="">Unidades en orden</label>
+
+        <input placeholder="Unidades en orden" formControlName="units_on_order">
+
+        <label for="">Reorder Level</label>
+
+        <input placeholder="Reorder Level" formControlName="reorder_level">
+
+        <label for="">Descuento</label>
+
+        <input placeholder="Descuento" formControlName="discountinued">
+    
+        <button type="submit" [disabled]="frmProducto.invalid">Aceptar</button>
+        <button type="button" routerLink="" >Cancelar</button>
+    
+    </form>
+</div>
+

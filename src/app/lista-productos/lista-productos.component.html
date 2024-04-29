@@ -1,0 +1,29 @@
+<div>
+    <table>
+        @for(elemento of productoss; track elemento.product_id){
+      <tbody>
+       
+          <tr>
+            <td>{{ elemento.product_id }}</td>
+            <td>{{ elemento.product_name }}</td>
+            <td>{{ elemento.supplier_id }}</td>
+            <td>{{ elemento.category_id }}</td>
+            <td>{{ elemento.quantity_per_unit }}</td>
+            <td>{{ elemento.unit_price }}</td>
+            <td>{{ elemento.units_in_stock }}</td>
+            <td>{{ elemento.units_on_order }}</td>
+            <td>{{ elemento.reorder_level }}</td>
+            <td>{{ elemento.discountinued }}</td>
+            <td><button type="button" [routerLink]="['edicion', elemento.product_id]">Editar Producto</button></td>
+            <td><button type="button" (click)="eliminar(elemento)">Eliminar Producto</button></td>
+          </tr>
+        
+      </tbody>
+    }
+    </table>
+  
+    <button routerLink="altaproducto">Alta producto nuevo</button>
+  
+   
+  </div>
+  <router-outlet></router-outlet>
